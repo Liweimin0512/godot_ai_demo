@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://c080lxxqsh5tn"]
 
-[ext_resource type="Script" path="res://state_machine/state_machine.gd" id="1_un35e"]
-[ext_resource type="Script" path="res://state_machine/state_1_chifan.gd" id="2_1cg5k"]
-[ext_resource type="Script" path="res://state_machine/state_2_shuijiao.gd" id="3_popob"]
-[ext_resource type="Script" path="res://state_machine/state_3_dadoudou.gd" id="4_slr2h"]
+[ext_resource type="Script" uid="uid://dgqcuqyh706rg" path="res://state_machine/state_machine.gd" id="1_un35e"]
+[ext_resource type="Script" uid="uid://vpvisqwqd6r5" path="res://state_machine/state_1_chifan.gd" id="2_1cg5k"]
+[ext_resource type="Script" uid="uid://cyxrvxpfdfysi" path="res://state_machine/state_2_shuijiao.gd" id="3_popob"]
+[ext_resource type="Script" uid="uid://cmj4cdlavl8c8" path="res://state_machine/state_3_dadoudou.gd" id="4_slr2h"]
 
 [node name="state_machine" type="Node"]
 script = ExtResource("1_un35e")

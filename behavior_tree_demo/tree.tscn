@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://t4pvp6rlae6o"]
 
-[ext_resource type="Script" path="res://behavior_tree_demo/tree.gd" id="1_g1ych"]
+[ext_resource type="Script" uid="uid://dmb8017gnquo" path="res://behavior_tree_demo/tree.gd" id="1_g1ych"]
 [ext_resource type="Texture2D" uid="uid://sujvof0wkj0o" path="res://assets/tree.tres" id="1_idpkr"]
 [ext_resource type="Texture2D" uid="uid://dftfx7x5ncakt" path="res://assets/greenbar/greenbar_00.png" id="3_xukym"]
 [ext_resource type="Texture2D" uid="uid://j0sfvovlukki" path="res://assets/greenbar/greenbar_01.png" id="4_x7lmj"]
@@ -115,9 +115,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ugclw"]
 _data = {
-"Cut": SubResource("Animation_32x0u"),
-"Grown": SubResource("Animation_f48px"),
-"RESET": SubResource("Animation_a43eq")
+&"Cut": SubResource("Animation_32x0u"),
+&"Grown": SubResource("Animation_f48px"),
+&"RESET": SubResource("Animation_a43eq")
 }
 
 [node name="tree" type="StaticBody2D"]

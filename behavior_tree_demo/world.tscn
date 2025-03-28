@@ -1,27 +1,27 @@
 [gd_scene load_steps=22 format=3 uid="uid://ep4dig0ohp7l"]
 
-[ext_resource type="Script" path="res://behavior_tree_demo/world.gd" id="1_606yq"]
+[ext_resource type="Script" uid="uid://ggietw1hulm1" path="res://behavior_tree_demo/world.gd" id="1_606yq"]
 [ext_resource type="Texture2D" uid="uid://d24r0ug8u2mdi" path="res://assets/tileset.png" id="1_jmtk0"]
 [ext_resource type="Texture2D" uid="uid://sujvof0wkj0o" path="res://assets/tree.tres" id="2_4kp8t"]
 [ext_resource type="PackedScene" uid="uid://cgtfhpqjov8vv" path="res://behavior_tree_demo/goblin.tscn" id="3_kqu86"]
 [ext_resource type="PackedScene" uid="uid://dqemfx1mye1ye" path="res://behavior_tree_demo/box.tscn" id="4_mxjo7"]
-[ext_resource type="Script" path="res://behavior_tree/behavior_tree.gd" id="5_3lnq0"]
-[ext_resource type="Script" path="res://behavior_tree/btNodes/composites/bt_selector.gd" id="6_bewqg"]
+[ext_resource type="Script" uid="uid://d2qmtpvq6jpcq" path="res://behavior_tree/behavior_tree.gd" id="5_3lnq0"]
+[ext_resource type="Script" uid="uid://bybbb56wxjdtr" path="res://behavior_tree/btNodes/composites/bt_selector.gd" id="6_bewqg"]
 [ext_resource type="Texture2D" uid="uid://b41to3ln45es3" path="res://assets/pickaxe.png" id="6_pjq8k"]
 [ext_resource type="Texture2D" uid="uid://cvbbelr7vsiw3" path="res://assets/wood.tres" id="7_aab4e"]
-[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_store_wood.gd" id="7_btpr2"]
-[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_pickup_fruit.gd" id="7_c45cr"]
-[ext_resource type="Script" path="res://behavior_tree/btNodes/composites/bt_sequence.gd" id="7_dseoy"]
-[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_grow_tree.gd" id="7_hhg0g"]
-[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_need_grow.gd" id="8_2pfij"]
-[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_pickup_wood.gd" id="8_udsqh"]
-[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_cut_tree.gd" id="9_t20mi"]
-[ext_resource type="Script" path="res://behavior_tree_demo/btNodes/bt_pickup_axe.gd" id="10_2k3sj"]
+[ext_resource type="Script" uid="uid://dbnyidn6y5bwd" path="res://behavior_tree_demo/btNodes/bt_store_wood.gd" id="7_btpr2"]
+[ext_resource type="Script" uid="uid://cwls8jerhd2b0" path="res://behavior_tree_demo/btNodes/bt_pickup_fruit.gd" id="7_c45cr"]
+[ext_resource type="Script" uid="uid://dl41mn8lrfx1e" path="res://behavior_tree/btNodes/composites/bt_sequence.gd" id="7_dseoy"]
+[ext_resource type="Script" uid="uid://f7divdma1o3y" path="res://behavior_tree_demo/btNodes/bt_grow_tree.gd" id="7_hhg0g"]
+[ext_resource type="Script" uid="uid://dgmmdiu10fgtb" path="res://behavior_tree_demo/btNodes/bt_need_grow.gd" id="8_2pfij"]
+[ext_resource type="Script" uid="uid://c31dalrgiaiuc" path="res://behavior_tree_demo/btNodes/bt_pickup_wood.gd" id="8_udsqh"]
+[ext_resource type="Script" uid="uid://vwuy7h528xwr" path="res://behavior_tree_demo/btNodes/bt_cut_tree.gd" id="9_t20mi"]
+[ext_resource type="Script" uid="uid://vcdk1g64hua3" path="res://behavior_tree_demo/btNodes/bt_pickup_axe.gd" id="10_2k3sj"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_vawwg"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-polygons = [PackedInt32Array(0, 1, 2, 3)]
-outlines = [PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)]
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)])
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5q3sd"]
 texture = ExtResource("1_jmtk0")

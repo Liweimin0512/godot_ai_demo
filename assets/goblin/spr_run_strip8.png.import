@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/spr_run_strip8.png-bb22165ab6b857f6fc6c90f2ee
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

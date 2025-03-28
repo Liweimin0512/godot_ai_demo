@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/spr_axe_strip10.png-2feeea3cda89e8dec437ee83a
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://cgtfhpqjov8vv"]
 
 [ext_resource type="Texture2D" uid="uid://7souir8readt" path="res://assets/goblin/spr_idle_strip9.png" id="1_8ecgj"]
-[ext_resource type="Script" path="res://behavior_tree_demo/goblin.gd" id="1_gyj6q"]
+[ext_resource type="Script" uid="uid://cgj2q3ri36fe3" path="res://behavior_tree_demo/goblin.gd" id="1_gyj6q"]
 [ext_resource type="Texture2D" uid="uid://bahlnf0r4budd" path="res://assets/goblin/spr_run_strip8.png" id="2_lfh5r"]
 [ext_resource type="Texture2D" uid="uid://bi38gn88nnr6e" path="res://assets/goblin/spr_axe_strip10.png" id="3_i2qvw"]
 [ext_resource type="Texture2D" uid="uid://c2xfp1dgbsweo" path="res://assets/goblin/spr_death_strip13.png" id="5_t8cud"]
@@ -285,11 +285,11 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lus12"]
 _data = {
-"Axe": SubResource("Animation_5x61s"),
-"Die": SubResource("Animation_qgf04"),
-"Idle": SubResource("Animation_1mfmk"),
-"RESET": SubResource("Animation_60b8t"),
-"Run": SubResource("Animation_sqx0s")
+&"Axe": SubResource("Animation_5x61s"),
+&"Die": SubResource("Animation_qgf04"),
+&"Idle": SubResource("Animation_1mfmk"),
+&"RESET": SubResource("Animation_60b8t"),
+&"Run": SubResource("Animation_sqx0s")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vptnj"]

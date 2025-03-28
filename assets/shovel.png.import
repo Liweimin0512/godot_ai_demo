@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/shovel.png-36a84a629eb7384cbc468a0b1b992bdc.c
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
