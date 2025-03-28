@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2ck2d2qf77f5"]
+
+[ext_resource type="Texture2D" uid="uid://ba4h8n4impib4" path="res://assets/fruit.tres" id="1_72w60"]
+[ext_resource type="Script" path="res://behavior_tree_demo/fruit.gd" id="1_nf4g3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5nepj"]
+radius = 4.0
+
+[node name="fruit" type="StaticBody2D"]
+script = ExtResource("1_nf4g3")
+
+[node name="Sprite2d" type="Sprite2D" parent="."]
+texture = ExtResource("1_72w60")
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5nepj")

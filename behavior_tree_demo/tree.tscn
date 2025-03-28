@@ -1,0 +1,144 @@
+[gd_scene load_steps=15 format=3 uid="uid://t4pvp6rlae6o"]
+
+[ext_resource type="Script" path="res://behavior_tree_demo/tree.gd" id="1_g1ych"]
+[ext_resource type="Texture2D" uid="uid://sujvof0wkj0o" path="res://assets/tree.tres" id="1_idpkr"]
+[ext_resource type="Texture2D" uid="uid://dftfx7x5ncakt" path="res://assets/greenbar/greenbar_00.png" id="3_xukym"]
+[ext_resource type="Texture2D" uid="uid://j0sfvovlukki" path="res://assets/greenbar/greenbar_01.png" id="4_x7lmj"]
+[ext_resource type="Texture2D" uid="uid://pc623xor46o5" path="res://assets/greenbar/greenbar_02.png" id="5_recon"]
+[ext_resource type="Texture2D" uid="uid://dblhyck6vitin" path="res://assets/greenbar/greenbar_03.png" id="6_b0vu4"]
+[ext_resource type="Texture2D" uid="uid://btd1o0rh4wndm" path="res://assets/greenbar/greenbar_04.png" id="7_7fqjt"]
+[ext_resource type="Texture2D" uid="uid://d18njpgq7sn81" path="res://assets/greenbar/greenbar_05.png" id="8_yt52c"]
+[ext_resource type="Texture2D" uid="uid://d1xbceh6n5gwt" path="res://assets/greenbar/greenbar_06.png" id="9_rdqol"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqkem"]
+size = Vector2(10, 6)
+
+[sub_resource type="Animation" id="Animation_32x0u"]
+resource_name = "Cut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:can_cut")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"drop_items"
+}, {
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_f48px"]
+resource_name = "Grown"
+length = 2.8
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_xukym"), ExtResource("4_x7lmj"), ExtResource("5_recon"), ExtResource("6_b0vu4"), ExtResource("7_7fqjt"), ExtResource("8_yt52c"), ExtResource("9_rdqol")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:can_cut")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_a43eq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_xukym")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ugclw"]
+_data = {
+"Cut": SubResource("Animation_32x0u"),
+"Grown": SubResource("Animation_f48px"),
+"RESET": SubResource("Animation_a43eq")
+}
+
+[node name="tree" type="StaticBody2D"]
+script = ExtResource("1_g1ych")
+
+[node name="Sprite2d" type="Sprite2D" parent="."]
+texture = ExtResource("1_idpkr")
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_rqkem")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -7.0
+offset_top = 18.0
+offset_right = 8.0
+offset_bottom = 25.0
+texture = ExtResource("3_xukym")
+stretch_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ugclw")
+}

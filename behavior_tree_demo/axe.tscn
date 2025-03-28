@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://4l7w33qkfn36"]
+
+[ext_resource type="Script" path="res://behavior_tree_demo/axe.gd" id="1_db8s0"]
+[ext_resource type="Texture2D" uid="uid://b41to3ln45es3" path="res://assets/pickaxe.png" id="1_rutmp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqkem"]
+size = Vector2(16, 16)
+
+[node name="axe" type="StaticBody2D"]
+script = ExtResource("1_db8s0")
+
+[node name="Sprite2d" type="Sprite2D" parent="."]
+texture = ExtResource("1_rutmp")
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rqkem")

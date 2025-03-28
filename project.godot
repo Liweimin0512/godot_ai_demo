@@ -1,0 +1,168 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+_global_script_classes=[{
+"base": "BTDecorator",
+"class": &"BTAlways",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/decorator/bt_always.gd"
+}, {
+"base": "BTNode",
+"class": &"BTComposite",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/bt_composite.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTCutTree",
+"language": &"GDScript",
+"path": "res://behavior_tree_demo/btNodes/bt_cut_tree.gd"
+}, {
+"base": "BTNode",
+"class": &"BTDecorator",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/bt_decorator.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTGrowTree",
+"language": &"GDScript",
+"path": "res://behavior_tree_demo/btNodes/bt_grow_tree.gd"
+}, {
+"base": "BTNode",
+"class": &"BTLeaf",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/bt_leaf.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTNeedGrow",
+"language": &"GDScript",
+"path": "res://behavior_tree_demo/btNodes/bt_need_grow.gd"
+}, {
+"base": "Node",
+"class": &"BTNode",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/bt_node.gd"
+}, {
+"base": "BTComposite",
+"class": &"BTParallel",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/composites/bt_parallel.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTPickupAxe",
+"language": &"GDScript",
+"path": "res://behavior_tree_demo/btNodes/bt_pickup_axe.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTPickupFruit",
+"language": &"GDScript",
+"path": "res://behavior_tree_demo/btNodes/bt_pickup_fruit.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTPickupWood",
+"language": &"GDScript",
+"path": "res://behavior_tree_demo/btNodes/bt_pickup_wood.gd"
+}, {
+"base": "BTSelector",
+"class": &"BTRandomSelector",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/composites/bt_random_selector.gd"
+}, {
+"base": "BTSequence",
+"class": &"BTRandomSequence",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/composites/bt_random_sequence.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTRepeat",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/decorator/bt_repeat.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTRepeatUntil",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/decorator/bt_repeat_until.gd"
+}, {
+"base": "BTDecorator",
+"class": &"BTRevert",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/decorator/bt_revert.gd"
+}, {
+"base": "BTComposite",
+"class": &"BTSelector",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/composites/bt_selector.gd"
+}, {
+"base": "BTComposite",
+"class": &"BTSequence",
+"language": &"GDScript",
+"path": "res://behavior_tree/btNodes/composites/bt_sequence.gd"
+}, {
+"base": "BTLeaf",
+"class": &"BTStoreWood",
+"language": &"GDScript",
+"path": "res://behavior_tree_demo/btNodes/bt_store_wood.gd"
+}, {
+"base": "Node",
+"class": &"BehaviorTree",
+"language": &"GDScript",
+"path": "res://behavior_tree/behavior_tree.gd"
+}, {
+"base": "CharacterBody2D",
+"class": &"PlayerCharacter",
+"language": &"GDScript",
+"path": "res://behavior_tree_demo/goblin.gd"
+}, {
+"base": "Node",
+"class": &"StateBase",
+"language": &"GDScript",
+"path": "res://state_machine/state_base.gd"
+}, {
+"base": "Node2D",
+"class": &"World",
+"language": &"GDScript",
+"path": "res://behavior_tree_demo/world.gd"
+}]
+_global_script_class_icons={
+"BTAlways": "",
+"BTComposite": "",
+"BTCutTree": "",
+"BTDecorator": "",
+"BTGrowTree": "",
+"BTLeaf": "",
+"BTNeedGrow": "",
+"BTNode": "",
+"BTParallel": "",
+"BTPickupAxe": "",
+"BTPickupFruit": "",
+"BTPickupWood": "",
+"BTRandomSelector": "",
+"BTRandomSequence": "",
+"BTRepeat": "",
+"BTRepeatUntil": "",
+"BTRevert": "",
+"BTSelector": "",
+"BTSequence": "",
+"BTStoreWood": "",
+"BehaviorTree": "",
+"PlayerCharacter": "",
+"StateBase": "",
+"World": ""
+}
+
+[application]
+
+config/name="AI_demo"
+run/main_scene="res://behavior_tree_demo/world.tscn"
+config/features=PackedStringArray("4.0", "Vulkan Clustered")
+config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"

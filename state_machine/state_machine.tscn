@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c080lxxqsh5tn"]
+
+[ext_resource type="Script" path="res://state_machine/state_machine.gd" id="1_un35e"]
+[ext_resource type="Script" path="res://state_machine/state_1_chifan.gd" id="2_1cg5k"]
+[ext_resource type="Script" path="res://state_machine/state_2_shuijiao.gd" id="3_popob"]
+[ext_resource type="Script" path="res://state_machine/state_3_dadoudou.gd" id="4_slr2h"]
+
+[node name="state_machine" type="Node"]
+script = ExtResource("1_un35e")
+initial_state = NodePath("state_1_chifan")
+
+[node name="state_1_chifan" type="Node" parent="."]
+script = ExtResource("2_1cg5k")
+
+[node name="state_2_shuijiao" type="Node" parent="."]
+script = ExtResource("3_popob")
+
+[node name="state_3_dadoudou" type="Node" parent="."]
+script = ExtResource("4_slr2h")

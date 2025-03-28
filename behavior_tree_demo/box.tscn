@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqemfx1mye1ye"]
+
+[ext_resource type="Texture2D" uid="uid://dx4fkyp2ycqx1" path="res://assets/box.tres" id="1_4b3dy"]
+[ext_resource type="Script" path="res://behavior_tree_demo/box.gd" id="1_cv6wl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqkem"]
+size = Vector2(16, 16)
+
+[node name="box" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_cv6wl")
+
+[node name="Sprite2d" type="Sprite2D" parent="."]
+texture = ExtResource("1_4b3dy")
+
+[node name="CollisionShape2d" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rqkem")
+
+[node name="NavigationObstacle2d" type="NavigationObstacle2D" parent="."]
